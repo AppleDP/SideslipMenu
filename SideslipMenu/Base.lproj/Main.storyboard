@@ -7,6 +7,38 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
+        <!--TableVC-->
+        <scene sceneID="Cad-1r-Fcg">
+            <objects>
+                <tableViewController id="hF4-E5-jMr" customClass="WQTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F5M-W7-4D1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gCq-O6-cqf">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCq-O6-cqf" id="QP7-uz-bQG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hF4-E5-jMr" id="WvO-Py-iRM"/>
+                            <outlet property="delegate" destination="hF4-E5-jMr" id="YwI-ug-OkL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="05K-38-iNl"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="Show" id="yPd-Zh-Eo4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rQ-7V-faO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="404"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,30 +52,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vdr-x1-vml">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="4" y="64" width="592" height="536"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-sM-9Qa">
+                                <rect key="frame" x="284" y="321.5" width="32" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5Zn-sM-9Qa" firstAttribute="centerY" secondItem="Vdr-x1-vml" secondAttribute="centerY" id="2t5-oT-eIS"/>
                             <constraint firstItem="Vdr-x1-vml" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5NX-JL-y7H"/>
+                            <constraint firstItem="5Zn-sM-9Qa" firstAttribute="centerX" secondItem="Vdr-x1-vml" secondAttribute="centerX" id="AF8-Om-gsb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vdr-x1-vml" secondAttribute="bottom" id="GLU-82-mL5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vdr-x1-vml" secondAttribute="trailing" constant="-20" id="daU-fb-ywz"/>
-                            <constraint firstItem="Vdr-x1-vml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="oK0-qO-2rW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vdr-x1-vml" secondAttribute="trailing" constant="-16" id="daU-fb-ywz"/>
+                            <constraint firstItem="Vdr-x1-vml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="oK0-qO-2rW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ea-Ki-c1u">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Show" id="V4K-l9-21q">
-                                <connections>
-                                    <action selector="showMenu:" destination="BYZ-38-t0r" id="0G0-Ru-PHc"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Hide" id="4d5-Zu-N5b">
-                                <connections>
-                                    <action selector="hideMenu:" destination="BYZ-38-t0r" id="vWl-R4-94a"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Show" id="Uhf-uv-KE0">
                                 <connections>
@@ -63,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="404"/>
+            <point key="canvasLocation" x="1882" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="frz-9h-Bkz">
@@ -76,7 +104,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3yv-P5-v4j"/>
+                        <segue destination="hF4-E5-jMr" kind="relationship" relationship="rootViewController" id="iR0-ao-4Eq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osk-NF-vbr" userLabel="First Responder" sceneMemberID="firstResponder"/>

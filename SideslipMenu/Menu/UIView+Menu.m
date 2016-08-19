@@ -8,7 +8,6 @@
 
 #import "UIView+Menu.h"
 #import "UIView+FrameChange.h"
-#import "UIView+anchorPoint.h"
 #define WS(weakSelf) __weak __typeof(&*self)weakSelf = self
 
 typedef enum {
@@ -25,7 +24,6 @@ BOOL isShow;
 BOOL isAnimation;
 CGPoint beginPoint;
 CGPoint changePoint;
-//CGRect initRect;
 CGRect initMenuRect;
 Location showLocation;
 SwipeLocation swipeLocation;
@@ -36,11 +34,12 @@ SwipeLocation swipeLocation;
    allowGesture:(BOOL)allowGesture{
     menu = view;
     showLocation = location;
+    self.layer.masksToBounds = YES;
     [self addSubview:menu];
     switch (location) {
         case Left:
             // 左
-            menu.x = - menu.width;
+            menu.x = -menu.width;
             break;
         case Right:
             // 右
@@ -48,17 +47,14 @@ SwipeLocation swipeLocation;
             break;
         case Top:
             // 上
-            menu.y = - menu.height;
+            menu.y = -menu.height;
             break;
         default:
             // 下
             menu.y = self.height;
             break;
     }
-    
-//    initRect = self.frame;
     initMenuRect = menu.frame;
-    
     if (allowGesture) {
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                               action:@selector(pan:)];
@@ -145,7 +141,6 @@ SwipeLocation swipeLocation;
                 return;
             }
             if (showLocation == Right && (menu.x < self.size.width - menu.width || menu.x > self.size.width)) {
-                NSLog(@"===== Right interrupt precent: %f =====",precent);
                 return;
             }
             if (showLocation == Top && (menu.y < -menu.height || menu.y > 0)) {
@@ -154,17 +149,22 @@ SwipeLocation swipeLocation;
             if (showLocation == Buttom && (menu.y < self.size.height - menu.height || menu.y > self.size.height)) {
                 return;
             }
-            
             switch (showLocation) {
                 case Left:{
                     for (UIView *view in [self subviews]) {
                         if (isShow) {
                             // hide
+                            if (precent > 0) {
+                                return;
+                            }
                             if (menu.x > -menu.width) {
                                 view.x += menu.width*precent - menu.x;
                             }
                         }else {
                             // show
+                            if (precent < 0){
+                                return;
+                            }
                             if (menu.x < 0) {
                                 view.x += (menu.width*precent - (menu.x - initMenuRect.origin.x));
                             }
@@ -176,11 +176,17 @@ SwipeLocation swipeLocation;
                     for (UIView *view in [self subviews]) {
                         if (isShow) {
                             // hide
+                            if (precent < 0) {
+                                return;
+                            }
                             if (menu.x < self.width) {
                                 view.x += menu.width*precent - (menu.x - (self.width - menu.width));
                             }
                         }else {
                             // show
+                            if (precent > 0) {
+                                return;
+                            }
                             if (menu.x > self.width - menu.width) {
                                 view.x -= (-menu.width*precent - (self.width - menu.x));
                             }
@@ -192,11 +198,17 @@ SwipeLocation swipeLocation;
                     for (UIView *view in [self subviews]) {
                         if (isShow) {
                             // hide
+                            if (precent > 0) {
+                                return;
+                            }
                             if (menu.y > -menu.height) {
                                 view.y += menu.height*precent - menu.y;
                             }
                         }else {
                             // show
+                            if (precent < 0){
+                                return;
+                            }
                             if (menu.y < 0) {
                                 view.y += (menu.height*precent - (menu.y - initMenuRect.origin.y));
                             }
@@ -208,11 +220,17 @@ SwipeLocation swipeLocation;
                     for (UIView *view in [self subviews]) {
                         if (isShow) {
                             // hide
+                            if (precent < 0) {
+                                return;
+                            }
                             if (menu.y < self.height) {
                                 view.y += menu.height*precent - (menu.y - (self.height - menu.height));
                             }
                         }else {
                             // show
+                            if (precent > 0) {
+                                return;
+                            }
                             if (menu.y > self.height - menu.height) {
                                 view.y -= (-menu.height*precent - (self.height - menu.y));
                             }
@@ -338,6 +356,9 @@ SwipeLocation swipeLocation;
 
 
 #pragma mark Private
+/**
+ *  判断滑动手势
+ */
 - (void)judgeDirection{
     if (showLocation == Left || showLocation == Right) {
         if (changePoint.x - beginPoint.x > 0) {

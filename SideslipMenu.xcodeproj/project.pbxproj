@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8487AD9D1D66D0A000A778D5 /* WQTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487AD9C1D66D0A000A778D5 /* WQTableVC.m */; };
 		84970C551D6416E1006138C6 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84970C541D6416E1006138C6 /* dog.jpg */; };
 		84A86A551D6302430029A1AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A541D6302430029A1AD /* main.m */; };
 		84A86A581D6302430029A1AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A571D6302430029A1AD /* AppDelegate.m */; };
@@ -18,7 +19,6 @@
 		84A86A791D6302430029A1AD /* SideslipMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A781D6302430029A1AD /* SideslipMenuUITests.m */; };
 		84A86A891D630C890029A1AD /* UIView+Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A881D630C890029A1AD /* UIView+Menu.m */; };
 		84A86A8C1D630F220029A1AD /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */; };
-		84A86A8F1D6314230029A1AD /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8487AD9B1D66D0A000A778D5 /* WQTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTableVC.h; sourceTree = "<group>"; };
+		8487AD9C1D66D0A000A778D5 /* WQTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTableVC.m; sourceTree = "<group>"; };
 		84970C541D6416E1006138C6 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		84A86A501D6302430029A1AD /* SideslipMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideslipMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A86A541D6302430029A1AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,8 +62,6 @@
 		84A86A881D630C890029A1AD /* UIView+Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Menu.m"; sourceTree = "<group>"; };
 		84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ FrameChange.m"; sourceTree = "<group>"; };
 		84A86A8B1D630F220029A1AD /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
-		84A86A8D1D6314230029A1AD /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
-		84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +116,8 @@
 				84A86A561D6302430029A1AD /* AppDelegate.h */,
 				84A86A571D6302430029A1AD /* AppDelegate.m */,
 				84970C541D6416E1006138C6 /* dog.jpg */,
+				8487AD9B1D66D0A000A778D5 /* WQTableVC.h */,
+				8487AD9C1D66D0A000A778D5 /* WQTableVC.m */,
 				84A86A591D6302430029A1AD /* ViewController.h */,
 				84A86A5A1D6302430029A1AD /* ViewController.m */,
 				84A86A5C1D6302430029A1AD /* Main.storyboard */,
@@ -156,8 +158,6 @@
 		84A86A861D630C710029A1AD /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				84A86A8D1D6314230029A1AD /* UIView+anchorPoint.h */,
-				84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */,
 				84A86A8B1D630F220029A1AD /* UIView+FrameChange.h */,
 				84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */,
 				84A86A871D630C890029A1AD /* UIView+Menu.h */,
@@ -301,8 +301,8 @@
 				84A86A5B1D6302430029A1AD /* ViewController.m in Sources */,
 				84A86A891D630C890029A1AD /* UIView+Menu.m in Sources */,
 				84A86A581D6302430029A1AD /* AppDelegate.m in Sources */,
-				84A86A8F1D6314230029A1AD /* UIView+anchorPoint.m in Sources */,
 				84A86A551D6302430029A1AD /* main.m in Sources */,
+				8487AD9D1D66D0A000A778D5 /* WQTableVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

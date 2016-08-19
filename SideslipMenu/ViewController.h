@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Menu.h"
 
 @interface ViewController : UIViewController
-
-
+@property (nonatomic, assign) Location location;
+//@property (nonatomic, copy) NSString *title;
 @end
 
