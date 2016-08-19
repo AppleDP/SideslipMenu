@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84970C551D6416E1006138C6 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84970C541D6416E1006138C6 /* dog.jpg */; };
 		84A86A551D6302430029A1AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A541D6302430029A1AD /* main.m */; };
 		84A86A581D6302430029A1AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A571D6302430029A1AD /* AppDelegate.m */; };
 		84A86A5B1D6302430029A1AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A5A1D6302430029A1AD /* ViewController.m */; };
@@ -15,6 +16,9 @@
 		84A86A631D6302430029A1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A86A611D6302430029A1AD /* LaunchScreen.storyboard */; };
 		84A86A6E1D6302430029A1AD /* SideslipMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A6D1D6302430029A1AD /* SideslipMenuTests.m */; };
 		84A86A791D6302430029A1AD /* SideslipMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A781D6302430029A1AD /* SideslipMenuUITests.m */; };
+		84A86A891D630C890029A1AD /* UIView+Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A881D630C890029A1AD /* UIView+Menu.m */; };
+		84A86A8C1D630F220029A1AD /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */; };
+		84A86A8F1D6314230029A1AD /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84970C541D6416E1006138C6 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		84A86A501D6302430029A1AD /* SideslipMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideslipMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A86A541D6302430029A1AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84A86A561D6302430029A1AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +56,12 @@
 		84A86A741D6302430029A1AD /* SideslipMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideslipMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A86A781D6302430029A1AD /* SideslipMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideslipMenuUITests.m; sourceTree = "<group>"; };
 		84A86A7A1D6302430029A1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A86A871D630C890029A1AD /* UIView+Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Menu.h"; sourceTree = "<group>"; };
+		84A86A881D630C890029A1AD /* UIView+Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Menu.m"; sourceTree = "<group>"; };
+		84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ FrameChange.m"; sourceTree = "<group>"; };
+		84A86A8B1D630F220029A1AD /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
+		84A86A8D1D6314230029A1AD /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
+		84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +112,10 @@
 		84A86A521D6302430029A1AD /* SideslipMenu */ = {
 			isa = PBXGroup;
 			children = (
+				84A86A861D630C710029A1AD /* Menu */,
 				84A86A561D6302430029A1AD /* AppDelegate.h */,
 				84A86A571D6302430029A1AD /* AppDelegate.m */,
+				84970C541D6416E1006138C6 /* dog.jpg */,
 				84A86A591D6302430029A1AD /* ViewController.h */,
 				84A86A5A1D6302430029A1AD /* ViewController.m */,
 				84A86A5C1D6302430029A1AD /* Main.storyboard */,
@@ -138,6 +151,19 @@
 				84A86A7A1D6302430029A1AD /* Info.plist */,
 			);
 			path = SideslipMenuUITests;
+			sourceTree = "<group>";
+		};
+		84A86A861D630C710029A1AD /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				84A86A8D1D6314230029A1AD /* UIView+anchorPoint.h */,
+				84A86A8E1D6314230029A1AD /* UIView+anchorPoint.m */,
+				84A86A8B1D630F220029A1AD /* UIView+FrameChange.h */,
+				84A86A8A1D630F220029A1AD /* UIView+ FrameChange.m */,
+				84A86A871D630C890029A1AD /* UIView+Menu.h */,
+				84A86A881D630C890029A1AD /* UIView+Menu.m */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84970C551D6416E1006138C6 /* dog.jpg in Resources */,
 				84A86A631D6302430029A1AD /* LaunchScreen.storyboard in Resources */,
 				84A86A601D6302430029A1AD /* Assets.xcassets in Resources */,
 				84A86A5E1D6302430029A1AD /* Main.storyboard in Resources */,
@@ -270,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A86A8C1D630F220029A1AD /* UIView+ FrameChange.m in Sources */,
 				84A86A5B1D6302430029A1AD /* ViewController.m in Sources */,
+				84A86A891D630C890029A1AD /* UIView+Menu.m in Sources */,
 				84A86A581D6302430029A1AD /* AppDelegate.m in Sources */,
+				84A86A8F1D6314230029A1AD /* UIView+anchorPoint.m in Sources */,
 				84A86A551D6302430029A1AD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,8 +443,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SideslipMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SUWQ.SideslipMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.SideslipMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -424,8 +455,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SideslipMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SUWQ.SideslipMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.SideslipMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -496,6 +528,7 @@
 				84A86A7F1D6302430029A1AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A86A801D6302430029A1AD /* Build configuration list for PBXNativeTarget "SideslipMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +537,7 @@
 				84A86A821D6302430029A1AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A86A831D6302430029A1AD /* Build configuration list for PBXNativeTarget "SideslipMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +546,7 @@
 				84A86A851D6302430029A1AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
