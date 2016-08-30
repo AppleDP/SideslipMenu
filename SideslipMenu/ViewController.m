@@ -25,7 +25,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     if (self.location == Left || self.location == Right) {
-        // 当 location 为 Left 或 Right 时，所设置的 menu1 的 x 无效，y 有效
+        // 当 location 为 Left 或 Right 时，设置的 menu1 的 x 无效，y 有效
         UITableView *menu1 = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 200, self.navigationController.view.height - 64)];
         [menu1 registerClass:[UITableViewCell class]
       forCellReuseIdentifier:@"Cell"];
@@ -37,7 +37,7 @@
                        location:self.location
                    allowGesture:YES];
     }else {
-        // 当 location 为 Top 或 Buttom 时，所设置的 menu2 的 y 无效，x 有效
+        // 当 location 为 Top 或 Buttom 时，设置的 menu2 的 y 无效，x 有效
         UITableView *menu2 = [[UITableView alloc] initWithFrame:self.navigationController.view.bounds];
         [menu2 registerClass:[UITableViewCell class]
       forCellReuseIdentifier:@"Cell"];
@@ -49,7 +49,6 @@
         }else {
             self.menuSuper = self.view;
         }
-        
         [self.menuSuper addMenu:menu2
                        location:self.location
                    allowGesture:YES];
@@ -84,6 +83,8 @@
     return cell;
 }
 @end
+
+
 
 
 

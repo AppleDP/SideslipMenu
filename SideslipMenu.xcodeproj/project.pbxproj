@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8487AD9D1D66D0A000A778D5 /* WQTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487AD9C1D66D0A000A778D5 /* WQTableVC.m */; };
+		848A50A51D754D6B0080BC1A /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 848A50A41D754D6B0080BC1A /* Left.png */; };
 		84970C551D6416E1006138C6 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84970C541D6416E1006138C6 /* dog.jpg */; };
 		84A86A551D6302430029A1AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A541D6302430029A1AD /* main.m */; };
 		84A86A581D6302430029A1AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A571D6302430029A1AD /* AppDelegate.m */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		8487AD9B1D66D0A000A778D5 /* WQTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTableVC.h; sourceTree = "<group>"; };
 		8487AD9C1D66D0A000A778D5 /* WQTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTableVC.m; sourceTree = "<group>"; };
+		848A50A41D754D6B0080BC1A /* Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left.png; sourceTree = "<group>"; };
 		84970C541D6416E1006138C6 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		84A86A501D6302430029A1AD /* SideslipMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideslipMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A86A541D6302430029A1AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		848A50A11D754CF30080BC1A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				848A50A41D754D6B0080BC1A /* Left.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		84A86A471D6302430029A1AD = {
 			isa = PBXGroup;
 			children = (
@@ -112,14 +122,15 @@
 		84A86A521D6302430029A1AD /* SideslipMenu */ = {
 			isa = PBXGroup;
 			children = (
+				848A50A11D754CF30080BC1A /* Image */,
 				84A86A861D630C710029A1AD /* Menu */,
 				84A86A561D6302430029A1AD /* AppDelegate.h */,
 				84A86A571D6302430029A1AD /* AppDelegate.m */,
-				84970C541D6416E1006138C6 /* dog.jpg */,
 				8487AD9B1D66D0A000A778D5 /* WQTableVC.h */,
 				8487AD9C1D66D0A000A778D5 /* WQTableVC.m */,
 				84A86A591D6302430029A1AD /* ViewController.h */,
 				84A86A5A1D6302430029A1AD /* ViewController.m */,
+				84970C541D6416E1006138C6 /* dog.jpg */,
 				84A86A5C1D6302430029A1AD /* Main.storyboard */,
 				84A86A5F1D6302430029A1AD /* Assets.xcassets */,
 				84A86A611D6302430029A1AD /* LaunchScreen.storyboard */,
@@ -271,6 +282,7 @@
 			files = (
 				84970C551D6416E1006138C6 /* dog.jpg in Resources */,
 				84A86A631D6302430029A1AD /* LaunchScreen.storyboard in Resources */,
+				848A50A51D754D6B0080BC1A /* Left.png in Resources */,
 				84A86A601D6302430029A1AD /* Assets.xcassets in Resources */,
 				84A86A5E1D6302430029A1AD /* Main.storyboard in Resources */,
 			);
